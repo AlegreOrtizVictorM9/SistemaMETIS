@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+
+    /* Propiedades para la imagen de fondo */
+    background-image: url('https://i.imgur.com/NLU9DRu.png'); /* URL de una imagen de fondo de ejemplo */
+    background-size: cover; /* Cubre todo el área del elemento */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Añadir transparencia al contenedor para que se vea el fondo */
+    background-color: rgba(255, 255, 255, 0.9); /* Blanco con 90% de opacidad */
+}
+
+h1, h2 {
+    color: #2c3e50;
+    width: 100%;
+    text-align: center;
+}
+
+.input-panel {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#coordinate-inputs div {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#coordinate-inputs label {
+    flex-basis: 40px; /* Adjust label width */
+}
+
+#coordinate-inputs input[type="number"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.button.primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.button.primary:hover {
+    background-color: #0056b3;
+}
+
+.button.success {
+    background-color: #28a745;
+    color: white;
+}
+
+.button.success:hover {
+    background-color: #218838;
+}
+
+.button.info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.button.info:hover {
+    background-color: #138496;
+}
+
+.button.secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.button.secondary:hover {
+    background-color: #5a6268;
+}
+
+.button.danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.button.danger:hover {
+    background-color: #c82333;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#map-container {
+    flex: 2;
+    min-width: 500px;
+    height: 600px; /* Adjust map height */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Ensure map doesn't overflow */
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e2f0d9;
+    color: #28a745;
+    border: 1px solid #28a745;
+}
+
+/* --- ESTILOS PARA LOS MARCADORES PERSONALIZADOS NUMERADOS --- */
+.custom-div-icon {
+    background: transparent; /* No background for the div itself */
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 30px; /* Ancho del divIcon */
+    height: 42px; /* Altura del divIcon */
+}
+
+.marker-pin {
+    width: 25px; /* Ancho de la "cabeza" del pin */
+    height: 25px; /* Altura de la "cabeza" del pin */
+    border-radius: 50% 50% 50% 0; /* Forma de gota de pin */
+    background: #28a745; /* Color del pin (verde oscuro) */
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 0;
+    left: 2.5px; /* Ajuste para centrar */
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.marker-number {
+    position: absolute;
+    top: 5px; /* Posición del número dentro del pin */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px; /* Tamaño de la fuente del número */
+    font-weight: bold;
+    color: white; /* Color del número */
+    transform: rotate(45deg); /* Desrotar el número para que se vea recto */
+}
+
+/* Estilos para la nueva sección de algoritmos */
+.algorithms-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 20px auto; /* Margen superior para separarlo del contenido principal */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo ligeramente transparente */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
+}
+
+.algorithms-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.algorithms-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna por defecto en pantallas pequeñas */
+    gap: 30px; /* Espacio entre las tarjetas */
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .algorithms-grid {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas medianas y grandes */
+    }
+}
+
+.algorithm-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; /* Altura mínima para las tarjetas */
+}
+
+.algorithm-card h3 {
+    text-align: center;
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #cfcfcf;
+}
+
+.algorithm-content {
+    flex-grow: 1; /* Permite que el contenido se expanda */
+    overflow-y: auto; /* Agrega scroll si el contenido es demasiado largo */
+}
+
+.algorithm-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.algorithm-content h4 {
+    color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
+.algorithm-content ol, .algorithm-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.algorithm-content ol li, .algorithm-content ul li {
+    margin-bottom: 8px;
+}
+
+.algorithm-content code {
+    background-color: #f0f0f0;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    color: #c7254e;
+}

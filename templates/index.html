@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METIS: Sistema de Planificación de Rutas de Distribución Logística - EJÉRCITO DEL PERÚ</title>
+    <!-- Leaflet CSS - INTEGRITY ATRIBUTO CORREGIDO -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Título principal de la aplicación actualizado -->
+        <h1>METIS: Sistema de Planificación de Rutas de Distribución Logística - EJÉRCITO DEL PERÚ</h1>
+
+        <div class="input-panel">
+            <h2>Puntos de Distribución</h2>
+            <div id="coordinate-inputs">
+                <!-- Los campos de entrada se agregarán dinámicamente aquí por JavaScript -->
+            </div>
+            <button id="add-point-btn" class="button primary">Agregar Punto</button>
+            <div class="actions">
+                <button id="draw-route-btn" class="button success">Trazar Ruta</button>
+                <!-- Texto del botón "Optimizar Ruta" actualizado -->
+                <button id="optimize-route-btn" class="button info">Optimizar Ruta</button>
+                <button id="save-route-btn" class="button secondary">Guardar Ruta</button>
+                <button id="load-route-btn" class="button secondary">Cargar Ruta</button>
+                <button id="clear-map-btn" class="button danger">Limpiar Mapa</button>
+            </div>
+            <p id="message-area" class="message"></p>
+        </div>
+
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <!-- Leaflet JavaScript - INTEGRITY ATRIBUTO CORREGIDO -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+    <!-- Custom JavaScript -->
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
