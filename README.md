@@ -1,4 +1,4 @@
 # SistemaMETIS
 Sistema de optimización del planeamiento de rutas de distribución logística.
-Instituto Científico y Tecnológico del Ejército.
+Victor Marcial Alegre Ortiz.
 Julio 2025.
